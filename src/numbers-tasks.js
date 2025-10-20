@@ -309,7 +309,14 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  return num > 0 && (num && num - 1) === 0;
+  if (num <= 0) {
+    return false;
+  }
+  const binaryStr = num.toString(2);
+  return (
+    binaryStr.indexOf('1') !== -1 &&
+    binaryStr.lastIndexOf('1') === binaryStr.indexOf('1')
+  );
 }
 
 /**
