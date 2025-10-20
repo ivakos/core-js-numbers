@@ -260,10 +260,8 @@ function getCube(num) {
 function getFibonacciNumber(index) {
   if (index <= 1) {
     return index;
-    // eslint-disable-next-line no-else-return
-  } else {
-    return getFibonacciNumber(index - 1) + getFibonacciNumber(index - 2);
   }
+  return getFibonacciNumber(index - 1) + getFibonacciNumber(index - 2);
 }
 
 /**
@@ -311,8 +309,7 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  // eslint-disable-next-line no-bitwise
-  return num > 0 && (num & (num - 1)) === 0;
+  return num > 0 && (num && num - 1) === 0;
 }
 
 /**
